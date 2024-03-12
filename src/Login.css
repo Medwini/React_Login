@@ -1,0 +1,174 @@
+:root{
+    --inputs_oscuro:#22202D;
+    --letras_iconos:#FCE8A2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Catamaran", sans-serif;
+}
+
+/* FONDO */
+
+.body{
+    background-image: url(../src/img/fondo.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LETRAS */
+
+.options-title > h3{
+    color: var(--letras_iconos);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* BARRA Y OPCIONES */
+
+.options{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.options-title{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.options-title > h3{
+    width: 50%;
+    text-align: center;
+}
+
+.btn-option{
+    margin-top: 10px;
+    width: 50%;
+    text-align: center;
+    display:grid;
+    grid-template-columns: repeat(8, 1fr);
+    position: relative;
+    align-items: center;
+}
+
+.btn-dash{
+    width: 100%;
+    height: 1rem;
+    background-color: var(--letras_iconos);
+    border-radius: 20px;
+    position: absolute;
+    grid-column: 4/6;
+}
+
+.btn-rot{
+    grid-column: 4/5;
+    background-color: var(--inputs_oscuro);
+    width: 30px;
+    height: 30px;
+    border-radius: 80px;
+    border: none;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;    
+    transition: all 1s ease-out;
+}
+
+.btn-rot > span{
+    transform: rotate(270deg);
+    transition: all .5s ease-in;
+    color: var(--letras_iconos);
+}
+
+.btn-rot:hover{
+    transform: translate(100%,0);
+    transition: all 1s ease-out;
+}
+.btn-rot:hover > span{
+    transform: rotate(0);
+    transition: all .5s ease-in;
+}
+
+/* CONTENEDOR PRINCIPAL DEL LOGIN / SIGN UP */
+
+
+.fondo-cont{
+    background-image: url('../src/img/fondo-cont.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.tam-cont{
+    margin-top: 3rem;
+    width: 100%;
+    padding: 2rem 4rem;
+    border-radius: 7px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.tam-cont > h2{
+    color: var(--letras_iconos);
+    font-weight: bold;
+}
+
+.cont-login{
+    width: 40%;
+}
+
+
+/* INPUTS DEL LOGIN / SIGN UP */
+
+.cont-input{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--inputs_oscuro);
+    margin: 20px 0;
+    height: 2.5em;
+}
+
+.cont-input > div{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--letras_iconos);
+}
+
+.cont-input > input{
+    width: 80%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: var(--letras_iconos);
+    background-color: transparent;
+}
+
+/* BOTON LOGIN / REGISTER */
+
+form button{
+    width: 7em;
+    height: 3em;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--inputs_oscuro);
+    background-color: var(--letras_iconos);
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.link-pass{
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--letras_iconos);
+}
