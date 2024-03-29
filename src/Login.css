@@ -16,15 +16,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* LETRAS */
 
-.options-title > h3{
+.options-title > h5{
     color: var(--letras_iconos);
     font-size: 18px;
     font-weight: bold;
+    width: 50%;
+    text-align: center;
 }
+
+.cont-login{
+    width: 40%;   
+}
+
 
 /* BARRA Y OPCIONES */
 
@@ -38,11 +49,6 @@
     width: 40%;
     display: flex;
     justify-content: space-between;
-}
-
-.options-title > h3{
-    width: 50%;
-    text-align: center;
 }
 
 .btn-option{
@@ -84,17 +90,38 @@
     color: var(--letras_iconos);
 }
 
-.btn-rot:hover{
+/* .btn-rot:hover{
+    transform: translate(100%,0);
+    transition: all 1s ease-out;
+} */
+
+.btn-rotar{
     transform: translate(100%,0);
     transition: all 1s ease-out;
 }
-.btn-rot:hover > span{
+
+.btn-rotar > span{
     transform: rotate(0);
     transition: all .5s ease-in;
 }
 
 /* CONTENEDOR PRINCIPAL DEL LOGIN / SIGN UP */
 
+.cont-cards{
+    position: relative;
+    perspective: 900px;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-cards{
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
 
 .fondo-cont{
     background-image: url('../src/img/fondo-cont.jpg');
@@ -103,12 +130,17 @@
 }
 
 .tam-cont{
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     width: 100%;
     padding: 2rem 4rem;
     border-radius: 7px;
     text-align: center;
     box-sizing: border-box;
+    height: 67vh;
+    display: grid;
+    /* justify-content: center; */
+    align-items: center;
+    overflow: auto;
 }
 
 .tam-cont > h2{
@@ -116,8 +148,20 @@
     font-weight: bold;
 }
 
-.cont-login{
-    width: 40%;
+.login{
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.cont-signup{
+    backface-visibility: hidden;
+    position: relative;
+    transform: rotateY(180deg);
+}
+
+.fliped-cards{
+    transform: rotateY(180deg);
+    transition: all 1s ease-out;
 }
 
 
@@ -128,7 +172,7 @@
     display: flex;
     flex-direction: row;
     background-color: var(--inputs_oscuro);
-    margin: 20px 0;
+    margin: 15px 0;
     height: 2.5em;
 }
 
@@ -138,6 +182,11 @@
     align-items: center;
     justify-content: center;
     color: var(--letras_iconos);
+}
+.cont-input > div > svg{
+    width: 1.5em;
+    height: 1.5em;
+    stroke: var(--letras_iconos);
 }
 
 .cont-input > input{
@@ -163,7 +212,7 @@ form button{
     background-color: var(--letras_iconos);
     border-radius: 3px;
     cursor: pointer;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .link-pass{
@@ -171,4 +220,6 @@ form button{
     font-weight: bold;
     text-decoration: none;
     color: var(--letras_iconos);
+    margin-bottom: 10px;
 }
+
