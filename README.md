@@ -1,3 +1,7 @@
+¡Hola!
+
+En el siguiente link puedes visualizar el proyecto en vivo 👉: https://just-login-to-practice-react.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
