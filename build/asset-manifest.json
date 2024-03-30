@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cdf9b201.css",
+    "main.js": "/static/js/main.e3bdee0a.js",
+    "static/media/fondo-cont.jpg": "/static/media/fondo-cont.b3c981c8a36b7dc6bd5b.jpg",
+    "static/media/fondo.jpg": "/static/media/fondo.0f95eeae3d9d307aa0eb.jpg",
+    "index.html": "/index.html",
+    "main.cdf9b201.css.map": "/static/css/main.cdf9b201.css.map",
+    "main.e3bdee0a.js.map": "/static/js/main.e3bdee0a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cdf9b201.css",
+    "static/js/main.e3bdee0a.js"
+  ]
+}
