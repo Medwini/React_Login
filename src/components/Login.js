@@ -20,8 +20,9 @@ function Login() {
       setCardRotando("flip-cards fliped-cards");
     }
   };
-  const handleSubmit = (event,a) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
+    alert('🙈 Estamos trabajando en ello. ');
   };
 
   return (
@@ -48,7 +49,7 @@ function Login() {
           
             <div className='login fondo-cont tam-cont'>
               <h2>Log In</h2>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className='cont-input'>
                   <div>
                     <span className="material-symbols-outlined">
